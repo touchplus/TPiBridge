@@ -28,6 +28,12 @@
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
+#define DB_WR       p5_0
+#define DB_RD       p5_5
+#define DB_CS       p7_2
+#define DB_RS       p7_3
+#define DB_PD       pd6
+#define DB          p6
 #define LED0        p8_6
 #define LED1        p8_7
 

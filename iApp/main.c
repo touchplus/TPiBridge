@@ -26,6 +26,7 @@
 #include "iDrv\Include\drvMCU.h"            // function usage : drvMCU_Init
 #include "iDrv\Include\drvGPIO.h"           // function usage : drvGPIO_Init
 #include "iDrv\Include\drvTimer.h"          // function usage : drvTimer_Init
+#include "iDrv\Include\drvLCD.h"            // function usage : drvLCD_Init
 
 
 // ***************************************************************************
@@ -48,8 +49,9 @@ volatile static BYTE    cCnt500ms;
 // ---------------------------------------------------------------------------
 void main(void)
 {
-    drvMCU_Init();                          // system clock initialization
-    drvGPIO_Init();                         // TPiBridge IO initialization
+    drvMCU_Init();                          // system  clock initialization
+    drvGPIO_Init();                         // TPiBridge I/O initialization
+    drvLCD_Init();                          // TPiBridge LCD initialization
     drvTimer_Init(40000);                   // system timer initialization (10ms)
     drvMCU_IE();                            // global interrupt enable
 
@@ -76,5 +78,7 @@ void TimerInterruptHandler(void)
     if(++cCnt500ms == 50) { cCnt500ms = 0;
         LED0 ^= 1;
         LED1 ^= 1;
+        if(LED0) drvLCD_WriteCommand(0x29);
+        else     drvLCD_WriteCommand(0x28);
     }
 }

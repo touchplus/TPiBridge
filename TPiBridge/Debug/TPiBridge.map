@@ -11,19 +11,22 @@ c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v545r01\bin\ln30.exe @D:
 
 # LINK FILE INFORMATION
 ncrt0 (D:\GitHub\TPiBridge\TPiBridge\Debug\ncrt0.r30)
-	Aug 25 19:35:28 2014
+	Sep  2 20:32:22 2014
 
 drvGPIO (D:\GitHub\TPiBridge\TPiBridge\Debug\drvGPIO.r30)
-	Aug 25 19:35:28 2014
+	Sep  2 20:32:21 2014
+
+drvLCD (D:\GitHub\TPiBridge\TPiBridge\Debug\drvLCD.r30)
+	Sep  2 22:13:40 2014
 
 drvMCU (D:\GitHub\TPiBridge\TPiBridge\Debug\drvMCU.r30)
-	Aug 25 19:35:28 2014
+	Sep  2 20:32:21 2014
 
 drvTimer (D:\GitHub\TPiBridge\TPiBridge\Debug\drvTimer.r30)
-	Aug 25 19:35:28 2014
+	Sep  2 20:32:21 2014
 
 main (D:\GitHub\TPiBridge\TPiBridge\Debug\main.r30)
-	Aug 25 19:35:28 2014
+	Sep  2 22:08:58 2014
 
 mdata (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v545r01\lib30\nc30lib.lib)
 	Jan  6 15:04:55 2010
@@ -55,19 +58,20 @@ data_NEI                         REL ROMDATA 080000 000000 2     ncrt0
                                  REL ROMDATA 080000 000010       mdata
 data_NOI                         REL ROMDATA 080010 000000       ncrt0
 program                          REL CODE    080010 000000 2     ncrt0
-                                 REL CODE    080010 000005 2     drvGPIO
-                                 REL CODE    080016 00004E 2     drvMCU
-                                 REL CODE    080064 000027 2     drvTimer
-                                 REL CODE    08008C 00005B 2     main
-interrupt                        REL CODE    0800E8 000000 2     ncrt0
-                                 REL CODE    0800E8 0000A7       ncrt0
-program_S                        REL CODE    080190 000000 2     ncrt0
+                                 REL CODE    080010 000020 2     drvGPIO
+                                 REL CODE    080030 000290 2     drvLCD
+                                 REL CODE    0802C0 00004E 2     drvMCU
+                                 REL CODE    08030E 000027 2     drvTimer
+                                 REL CODE    080336 000074 2     main
+interrupt                        REL CODE    0803AA 000000 2     ncrt0
+                                 REL CODE    0803AA 0000A7       ncrt0
+program_S                        REL CODE    080452 000000 2     ncrt0
 vector                           ABS ROMDATA 0FFD00 000100       ncrt0
 fvector                          ABS ROMDATA 0FFFDC 000024       ncrt0
 # Total -------------------------------------------------------------------
                                      DATA           000919(0002329) Byte(s)
                                      ROMDATA        000134(0000308) Byte(s)
-                                     CODE           00017E(0000382) Byte(s)
+                                     CODE           000441(0001089) Byte(s)
 
 ##########################################
 # VARIABLE VECTOR TABLE INFORMATION      #
@@ -99,11 +103,13 @@ No.  Address               No.  Address               No.  Address
 ##########################################
 # (3) GLOBAL LABEL INFORMATION           #
 ##########################################
-$drvTimer_Init     080064  $exit              08018c  _TimerA0Handler    080082
-_TimerInterruptH   0800a6  __memt             000408  __mnext            000410
-__msize            000414  __pool             000400  _drvGPIO_Init      080010
-_drvMCU_IE         08005e  _drvMCU_Init       080016  _exit              08018c
-_main              08008c  dummy_int          08018e  start              0800e8
+$drvLCD_WriteCom   0801f4  $drvLCD_WriteCom   080220  $drvLCD_WriteDat   080262
+$drvLCD_WriteDat   080286  $drvTimer_Init     08030e  $exit              08044e
+_TimerA0Handler    08032c  _TimerInterruptH   080354  __memt             000408
+__mnext            000410  __msize            000414  __pool             000400
+_drvGPIO_Init      080010  _drvLCD_Init       080030  _drvMCU_IE         080308
+_drvMCU_Init       0802c0  _exit              08044e  _main              080336
+dummy_int          080450  start              0803aa  
 
 ##########################################
 # (4) GLOBAL EQU SYMBOL INFORMATION      #
@@ -119,6 +125,7 @@ __SB__           00000400
 ##########################################
 @ ncrt0 ( D:\GitHub\TPiBridge\TPiBridge\Debug\ncrt0.r30 )
 @ drvGPIO ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvGPIO.r30 )
+@ drvLCD ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvLCD.r30 )
 @ drvMCU ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvMCU.r30 )
 @ drvTimer ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvTimer.r30 )
 @ main ( D:\GitHub\TPiBridge\TPiBridge\Debug\main.r30 )
@@ -129,6 +136,7 @@ __SB__           00000400
 ##########################################
 @ ncrt0 ( D:\GitHub\TPiBridge\TPiBridge\Debug\ncrt0.r30 )
 @ drvGPIO ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvGPIO.r30 )
+@ drvLCD ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvLCD.r30 )
 @ drvMCU ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvMCU.r30 )
 @ drvTimer ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvTimer.r30 )
 @ main ( D:\GitHub\TPiBridge\TPiBridge\Debug\main.r30 )
@@ -139,6 +147,7 @@ __SB__           00000400
 ##########################################
 @ ncrt0 ( D:\GitHub\TPiBridge\TPiBridge\Debug\ncrt0.r30 )
 @ drvGPIO ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvGPIO.r30 )
+@ drvLCD ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvLCD.r30 )
 @ drvMCU ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvMCU.r30 )
 @ drvTimer ( D:\GitHub\TPiBridge\TPiBridge\Debug\drvTimer.r30 )
 @ main ( D:\GitHub\TPiBridge\TPiBridge\Debug\main.r30 )
@@ -183,11 +192,11 @@ data_NEI
 data_NOI
                                   00080010  00080010         0   1
 program
-                                  00080010  000800e6        d7   2
+                                  00080010  000803a9       39a   2
 interrupt
-                                  000800e8  0008018e        a7   2
+                                  000803aa  00080450        a7   2
 program_S
-                                  00080190  00080190         0   2
+                                  00080452  00080452         0   2
 vector
                                   000ffd00  000ffdff       100   1
 fvector
@@ -226,34 +235,47 @@ FILE=mdata
 
 SECTION=program
 FILE=D:/GitHub/TPiBridge/iDrv/drvGPIO
-                                  00080010  00080014         5
+                                  00080010  0008002f        20
   _drvGPIO_Init
-                                  00080010         5   func ,g         0
+                                  00080010        20   func ,g         0
+
+FILE=D:/GitHub/TPiBridge/iDrv/drvLCD
+                                  00080030  000802bf       290
+  _drvLCD_Init
+                                  00080030       1c3   func ,g         0
+  $drvLCD_WriteCommand
+                                  000801f4        2d   func ,g         0
+  $drvLCD_WriteCommandN
+                                  00080220        42   func ,g         0
+  $drvLCD_WriteData
+                                  00080262        24   func ,g         0
+  $drvLCD_WriteDataN
+                                  00080286        3a   func ,g         0
 
 FILE=D:/GitHub/TPiBridge/iDrv/drvMCU
-                                  00080016  00080063        4e
+                                  000802c0  0008030d        4e
   _drvMCU_Init
-                                  00080016        48   func ,g         0
+                                  000802c0        48   func ,g         0
   _drvMCU_IE
-                                  0008005e         6   func ,g         0
+                                  00080308         6   func ,g         0
 
 FILE=D:/GitHub/TPiBridge/iDrv/drvTimer
-                                  00080064  0008008a        27
+                                  0008030e  00080334        27
   $drvTimer_Init
-                                  00080064        1d   func ,g         0
+                                  0008030e        1d   func ,g         0
 
 FILE=D:/GitHub/TPiBridge/iApp/main
-                                  0008008c  000800e6        5b
+                                  00080336  000803a9        74
   _main
-                                  0008008c        19   func ,g         0
+                                  00080336        1d   func ,g         0
 
 SECTION=interrupt
 FILE=ncrt0
-                                  000800e8  0008018e        a7
+                                  000803aa  00080450        a7
   $exit
-                                  0008018c         0   none ,g         0
+                                  0008044e         0   none ,g         0
   _exit
-                                  0008018c         0   none ,g         0
+                                  0008044e         0   none ,g         0
   dummy_int
-                                  0008018e         0   none ,g         0
+                                  00080450         0   none ,g         0
 
