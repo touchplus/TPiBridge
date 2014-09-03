@@ -67,4 +67,15 @@ void drvGPIO_Init(void)
                                             // P8_5 = VbusDTCT  ( default input )
                                             // P8_6 = LED0      ( default output)
                                             // P8_7 = LED1      ( default output)
+
+	prc2 = 1;								// unprotect pd9
+	pd9	 = 0x00;					        // P9_0 - P9_2 as input for USB 
+	prc2 = 0;								// protect pd9
+											// P9_3 = DAC	    ( default input )
+											// P9_4 = OCO	    ( default input	)
+											// P9_5 = VIN	    ( default input	)
+											// P9_6 = CIN	    ( default input	)
+											// P9_7 = RST	    ( default input )
+
+    da0e = 1;                               // enable DAC
 }

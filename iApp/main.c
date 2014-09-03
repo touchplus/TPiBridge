@@ -24,8 +24,9 @@
 #include "sfr6c.h"                          // TR16C0 special function register
 #include "iLib\Include\Orchis.h"            // Orchis standard type definition
 #include "iDrv\Include\drvMCU.h"            // function usage : drvMCU_Init
-#include "iDrv\Include\drvGPIO.h"           // function usage : drvGPIO_Init
 #include "iDrv\Include\drvTimer.h"          // function usage : drvTimer_Init
+#include "iDrv\Include\drvGPIO.h"           // function usage : drvGPIO_Init
+#include "iDrv\Include\drvADC.h"            // function usage : drvADC_Init
 #include "iDrv\Include\drvLCD.h"            // function usage : drvLCD_Init
 
 
@@ -49,9 +50,13 @@ volatile static BYTE    cCnt500ms;
 // ---------------------------------------------------------------------------
 void main(void)
 {
+    WORD    wDelay;
+
+
     drvMCU_Init();                          // system  clock initialization
     drvGPIO_Init();                         // TPiBridge I/O initialization
     drvLCD_Init();                          // TPiBridge LCD initialization
+    drvADC_Init();                          // TPiBridge ADC initialization
     drvTimer_Init(40000);                   // system timer initialization (10ms)
     drvMCU_IE();                            // global interrupt enable
 
@@ -59,9 +64,16 @@ void main(void)
     //
     //                              main thread
     //________________________________________________________________________
+    //
 
     while(1)
     {
+        wDelay = CIN * 10;                  // ADC test
+        da0 = 0xff;                         // DAC test
+        while(--wDelay);
+        wDelay = CIN * 10;                  // ADC test
+        da0 = 0x00;                         // DAC test
+        while(--wDelay);
     }
 }
 // Orchis2 -------------------------------------------------------------------

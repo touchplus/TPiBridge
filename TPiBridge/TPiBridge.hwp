@@ -110,6 +110,7 @@
 [PROJECT_FILES]
 "D:\GitHub\TPiBridge\TPiBridge\ncrt0.a30" "User" "Assembly source file" 2 
 "D:\GitHub\TPiBridge\iApp\main.c" "User" "iApp" 2 
+"D:\GitHub\TPiBridge\iDrv\drvADC.c" "User" "iDrv" 2 
 "D:\GitHub\TPiBridge\iDrv\drvGPIO.c" "User" "iDrv" 2 
 "D:\GitHub\TPiBridge\iDrv\drvLCD.c" "User" "iDrv" 2 
 "D:\GitHub\TPiBridge\iDrv\drvMCU.c" "User" "iDrv" 2 
@@ -133,20 +134,21 @@
 [OPTIONS_Debug_Renesas M16C C Compiler]
 "C source file" "0caf0bbe890cfc10" 1 
 "D:\GitHub\TPiBridge\iApp\main.c" "0caf0bbe890cfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvADC.c" "0ea74f83397cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvGPIO.c" "0caf0bbe890cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvLCD.c" "0844c55fce6cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvMCU.c" "0caf0bbe890cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvTimer.c" "0caf0bbe890cfc10" 1 
 [OPTIONS_Debug_Renesas M16C Configurator]
-"Single Shot" "0844c55fce6cfc10" 6 
+"Single Shot" "0ea74f83397cfc10" 6 
 [OPTIONS_Debug_Renesas M16C ConfiguratorR8C]
-"Single Shot" "0844c55fce6cfc10" 6 
+"Single Shot" "0ea74f83397cfc10" 6 
 [OPTIONS_Debug_Renesas M16C Librarian]
-"Single Shot" "0844c55fce6cfc10" 5 
+"Single Shot" "0ea74f83397cfc10" 5 
 [OPTIONS_Debug_Renesas M16C Linker]
-"Single Shot" "0504e55fce6cfc10" 3 
+"Single Shot" "0f217f83397cfc10" 3 
 [OPTIONS_Debug_Renesas M16C Stype Converter]
-"Single Shot" "0504e55fce6cfc10" 4 
+"Single Shot" "0f217f83397cfc10" 4 
 [OPTIONS_Debug]
 "" 0 
 "[V|VERSION|1] [B|COMMAND|1] [S|SPEC|UITRON4] " 6 
@@ -166,20 +168,21 @@
 [OPTIONS_Debug_M16C_E8a_SYSTEM_Renesas M16C C Compiler]
 "C source file" "069abb94190cfc10" 1 
 "D:\GitHub\TPiBridge\iApp\main.c" "0b11e795890cfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvADC.c" "0ea74f83397cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvGPIO.c" "08467927890cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvLCD.c" "0844c55fce6cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvMCU.c" "08467927890cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvTimer.c" "08467927890cfc10" 1 
 [OPTIONS_Debug_M16C_E8a_SYSTEM_Renesas M16C Configurator]
-"Single Shot" "0844c55fce6cfc10" 6 
+"Single Shot" "0ea74f83397cfc10" 6 
 [OPTIONS_Debug_M16C_E8a_SYSTEM_Renesas M16C ConfiguratorR8C]
-"Single Shot" "0844c55fce6cfc10" 6 
+"Single Shot" "0ea74f83397cfc10" 6 
 [OPTIONS_Debug_M16C_E8a_SYSTEM_Renesas M16C Librarian]
-"Single Shot" "0844c55fce6cfc10" 5 
+"Single Shot" "0ea74f83397cfc10" 5 
 [OPTIONS_Debug_M16C_E8a_SYSTEM_Renesas M16C Linker]
-"Single Shot" "0504e55fce6cfc10" 3 
+"Single Shot" "0f217f83397cfc10" 3 
 [OPTIONS_Debug_M16C_E8a_SYSTEM_Renesas M16C Stype Converter]
-"Single Shot" "0504e55fce6cfc10" 4 
+"Single Shot" "0f217f83397cfc10" 4 
 [OPTIONS_Debug_M16C_E8a_SYSTEM]
 "" 0 
 "[V|VERSION|1] [B|COMMAND|1] [S|SPEC|UITRON4] " 6 
@@ -198,20 +201,21 @@
 [OPTIONS_Release_Renesas M16C C Compiler]
 "C source file" "069abb94190cfc10" 1 
 "D:\GitHub\TPiBridge\iApp\main.c" "0b11e795890cfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvADC.c" "0ea74f83397cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvGPIO.c" "08467927890cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvLCD.c" "0844c55fce6cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvMCU.c" "08467927890cfc10" 1 
 "D:\GitHub\TPiBridge\iDrv\drvTimer.c" "08467927890cfc10" 1 
 [OPTIONS_Release_Renesas M16C Configurator]
-"Single Shot" "0844c55fce6cfc10" 6 
+"Single Shot" "0ea74f83397cfc10" 6 
 [OPTIONS_Release_Renesas M16C ConfiguratorR8C]
-"Single Shot" "0844c55fce6cfc10" 6 
+"Single Shot" "0ea74f83397cfc10" 6 
 [OPTIONS_Release_Renesas M16C Librarian]
-"Single Shot" "0844c55fce6cfc10" 5 
+"Single Shot" "0ea74f83397cfc10" 5 
 [OPTIONS_Release_Renesas M16C Linker]
-"Single Shot" "0504e55fce6cfc10" 3 
+"Single Shot" "0f217f83397cfc10" 3 
 [OPTIONS_Release_Renesas M16C Stype Converter]
-"Single Shot" "0504e55fce6cfc10" 4 
+"Single Shot" "0f217f83397cfc10" 4 
 [OPTIONS_Release]
 "" 0 
 "[V|VERSION|1] [B|COMMAND|1] [S|SPEC|UITRON4] " 6 
