@@ -1,10 +1,10 @@
 //----------------------------------------------------------------------------
 // Touchplus information Corp.
 //
-// $RCSfile: Orchis.h,v $
+// $RCSfile: drvIR.h,v $
 // $Revision: 0.9 $
 // $Author: Albert Hu $
-// $Date: 2014/9/4 22:19:11 $
+// $Date: 2014/9/4 21:33:40 $
 //
 // ---------------------------------------------------------------------------
 // >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -21,23 +21,40 @@
 // BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY OR
 // FITNESS FOR A PARTICULAR PURPOSE.
 // ---------------------------------------------------------------------------
-#ifndef __ORCHIS_H__
-#define __ORCHIS_H__
+#ifndef __DRV_IR_H__
+#define __DRV_IR_H__
 
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-typedef unsigned char   BYTE;
-typedef unsigned short  WORD;
-typedef unsigned long   DWORD;
-typedef unsigned char   UINT8;
-typedef unsigned short  UINT16;
+#define IR_RECORD_SIZE  1024
+#define IR_HEADER_SIZE  128
 
-//............................................................................
 
-#define TRUE            1
-#define FALSE           0
+#ifdef  __IR_RECORDER__
+        volatile BYTE   g_cIrRecorded;
+        volatile WORD   g_wCaptureCnt;
+        volatile WORD   g_awIrPattern[IR_HEADER_SIZE];
+        volatile WORD   g_awIrCapture[IR_RECORD_SIZE];
+#else
+extern  volatile BYTE   g_cIrRecorded;
+extern  volatile WORD   g_wCaptureCnt;
+extern  volatile WORD   g_awIrPattern[IR_HEADER_SIZE];
+extern  volatile WORD   g_awIrCapture[IR_RECORD_SIZE];
+#endif
+
+
+// Orchis2 -------------------------------------------------------------------
+// IR interrupt (INT1) initialization
+//
+// Params:
+// none
+//
+// Return:
+// none
+// ---------------------------------------------------------------------------
+void drvIR_Init();
 
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
