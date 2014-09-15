@@ -54,7 +54,7 @@ extern  volatile WORD   g_awIrCapture[IR_RECORD_SIZE];
 // Return:
 // none
 // ---------------------------------------------------------------------------
-void drvIR_Init();
+void drvIR_Init(void);
 
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -116,10 +116,12 @@
 "D:\GitHub\TPiBridge\iDrv\drvLCD.c" "User" "iDrv" 2 
 "D:\GitHub\TPiBridge\iDrv\drvMCU.c" "User" "iDrv" 2 
 "D:\GitHub\TPiBridge\iDrv\drvTimer.c" "User" "iDrv" 2 
+"D:\GitHub\TPiBridge\iLib\TPiBridge.lib" "User" "iLib" 2 
 [FOLDER]
 "Assembly source file" "Assembly source file" 
 "iApp" "iApp" 
 "iDrv" "iDrv" 
+"iLib" "iLib" 
 [GENERAL_DATA_PROJECT]
 "USE_CUSTOM_LINKAGE_ORDER" "1" 
 [ON_DEMAND_COMPONENTS_LOADED]
@@ -133,33 +135,34 @@
 "Assembly source file" "069abb94190cfc10" 2 
 "D:\GitHub\TPiBridge\TPiBridge\ncrt0.a30" "069abb94190cfc10" 2 
 [OPTIONS_Debug_Renesas M16C C Compiler]
-"C source file" "0caf0bbe890cfc10" 1 
-"D:\GitHub\TPiBridge\iApp\main.c" "0caf0bbe890cfc10" 1 
-"D:\GitHub\TPiBridge\iDrv\drvADC.c" "0ea74f83397cfc10" 1 
-"D:\GitHub\TPiBridge\iDrv\drvGPIO.c" "0caf0bbe890cfc10" 1 
-"D:\GitHub\TPiBridge\iDrv\drvIR.c" "0b261014c58cfc10" 1 
-"D:\GitHub\TPiBridge\iDrv\drvLCD.c" "0844c55fce6cfc10" 1 
-"D:\GitHub\TPiBridge\iDrv\drvMCU.c" "0caf0bbe890cfc10" 1 
-"D:\GitHub\TPiBridge\iDrv\drvTimer.c" "0caf0bbe890cfc10" 1 
+"C source file" "03427f19df0dfc10" 1 
+"D:\GitHub\TPiBridge\iApp\main.c" "03427f19df0dfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvADC.c" "03427f19df0dfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvGPIO.c" "03427f19df0dfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvIR.c" "03427f19df0dfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvLCD.c" "03427f19df0dfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvMCU.c" "03427f19df0dfc10" 1 
+"D:\GitHub\TPiBridge\iDrv\drvTimer.c" "03427f19df0dfc10" 1 
 [OPTIONS_Debug_Renesas M16C Configurator]
 "Single Shot" "0b261014c58cfc10" 6 
 [OPTIONS_Debug_Renesas M16C ConfiguratorR8C]
 "Single Shot" "0b261014c58cfc10" 6 
 [OPTIONS_Debug_Renesas M16C Librarian]
-"Single Shot" "0b261014c58cfc10" 5 
+"Single Shot" "02f842377decfc10" 5 
 [OPTIONS_Debug_Renesas M16C Linker]
-"Single Shot" "0e9b6014c58cfc10" 3 
+"Single Shot" "04c01c85bdecfc10" 3 
 [OPTIONS_Debug_Renesas M16C Stype Converter]
 "Single Shot" "0e9b6014c58cfc10" 4 
 [OPTIONS_Debug]
 "" 0 
 "[V|VERSION|1] [B|COMMAND|1] [S|SPEC|UITRON4] " 6 
 "[V|VERSION|1] [B|DATALENGTH|1] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).mot^"] " 4 
-"[V|VERSION|1] [S|INCLUDE|^"$(WORKSPDIR)^"|^"$(PROJDIR)^"] [S|OUTPUT|OBJECTCODE] [B|INSPECTOR|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).r30^"]
+"[V|VERSION|1] [S|INCLUDE|^"$(WORKSPDIR)^"|^"$(PROJDIR)^"] [S|OUTPUT|OBJECTCODE] [B|INSPECTOR|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).r30^"] [B|FFAR_POINTER|1] [B|WALL|1] [B|SILENT|1]
 " 1 
 "[V|VERSION|1] [S|LIST|LM] [B|INSPECTOR|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).r30^"] " 2 
 "[V|VERSION|1] [S|MODE|CREATE|] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).lib^"] " 5 
-"[V|VERSION|2] [B|STARTUPLINK|1] [B|DEBUG|1] [B|MAP-S|1] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).x30^"] [S|INPUTLIBRARY|^"L=nc30lib^"] " 3 
+"[V|VERSION|3] [S|INPUTLIBRARY|^"L=nc30lib^"] [S|INPUT|^"$(WORKSPDIR)\iLib\drvTPiDE.r30^"|^"$(WORKSPDIR)\iLib\drvBulkDescriptors.r30^"|^"$(WORKSPDIR)\iLib\drvTimer.r30^"|^"$(WORKSPDIR)\iLib\IIC.r30^"|^"$(WORKSPDIR)\iLib\IIC_HAL_MM_M16C6C.r30^"|^"$(WORKSPDIR)\iLib\IIC_HAL.r30^"|^"$(WORKSPDIR)\iLib\IIC_HAL_UART_M16C6C.r30^"|^"$(WORKSPDIR)\iLib\usb_cdc.r30^"|^"$(WORKSPDIR)\iLib\usb_core.r30^"|^"$(WORKSPDIR)\iLib\usb_hal.r30^"|^"$(WORKSPDIR)\iLib\appUSB.r30^"] [B|DEBUG|1] [B|MAP-S|1] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).x30^"] [B|STARTUPLINK|1]
+" 3 
 [EXCLUDED_FILES_Debug]
 [LINKAGE_ORDER_Debug]
 "D:\GitHub\TPiBridge\TPiBridge\Debug\ncrt0.r30" 

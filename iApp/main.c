@@ -29,6 +29,7 @@
 #include "iDrv\Include\drvADC.h"            // function usage : drvADC_Init
 #include "iDrv\Include\drvIR.h"             // function usage : drvIR_Init
 #include "iDrv\Include\drvLCD.h"            // function usage : drvLCD_Init
+#include "iLib\Include\TPiDE.h"             // function usage : USBCDC_Init
 
 
 // ***************************************************************************
@@ -51,14 +52,22 @@ volatile static BYTE    cCnt500ms;
 // ---------------------------------------------------------------------------
 void main(void)
 {
-    WORD    i, wDelay;
+    WORD        i, wDelay;
+	BYTE		cConfigured = FALSE;
 
 
-    drvMCU_Init();                          // TR16C0 system clock initialization
+    //!!!!!!!!!!!!!!!!! TPiBridge hardware initialization !!!!!!!!!!!!!!!!!!!!
+
+     drvMCU_Init();                         // TR16C0 system clock initialization
     drvGPIO_Init();                         // TPiBridge I/O initialization
-    drvADC_Init();                          // TPiBridge ADC initialization
-    drvIR_Init();                           // TPiBridge IR receiver initialization
-    drvLCD_Init();                          // TPiBridge LCD initialization
+     drvADC_Init();                         // TPiBridge ADC initialization
+      drvIR_Init();                         // TPiBridge IR receiver initialization
+     drvLCD_Init();                         // TPiBridge LCD initialization
+	 USBCDC_Init();                         // TPiBridge USB (CDC) driver initialization
+
+
+    //!!!!!!!!!!!!!!!!!! user application initialization !!!!!!!!!!!!!!!!!!!!!
+
     drvTimer_Init(40000);                   // system timer initialization (10ms)
     drvMCU_IE();                            // global interrupt enable
 
@@ -67,9 +76,28 @@ void main(void)
     //                              main thread
     //________________________________________________________________________
     //
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! TPiDE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    while(1)
-    {
+    while(1) {
+        if(halIsUSBConfigOK()) {
+		if(      !cConfigured) {
+			      cConfigured = TRUE;
+
+			g_dwRxSize = 0;
+			USBCDC_Read_Async(ISP_BUFFER_SIZE, g_acISPBuf, CBDoneBulkRead);
+            drvTPiDE_Init();
+	        drvTimerB0Start();
+	        drvTimerB0CountSet(0);
+        }
+        else {
+            drvTPiDE_Scheduler(); if(!appKbHit() ||
+            drvTimerB0CountGet() >= 2) {
+	        drvTimerB0CountSet(0);
+		    drvTPiDE_Ticking();
+        }   }   }
+
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! USER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+
         if(g_cIrRecorded) { LED1 ^= 1; g_cIrRecorded = FALSE; }
 
         wDelay = CIN * 10;                  // ADC test
@@ -97,4 +125,3 @@ void TimerInterruptHandler(void)
         else     drvLCD_WriteCommand(0x28);
     }
 }
-
