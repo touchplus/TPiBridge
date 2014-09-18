@@ -11,61 +11,61 @@ c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v545r01\bin\ln30.exe @D:
 
 # LINK FILE INFORMATION
 ncrt0 (D:\GitHub\TPiBridge\TPiBridge\Debug\ncrt0.r30)
-	Sep 15 16:29:29 2014
+	Sep 18 21:25:49 2014
 
 appUSB (D:\GitHub\TPiBridge\iLib\appUSB.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:02 2014
 
 drvADC (D:\GitHub\TPiBridge\TPiBridge\Debug\drvADC.r30)
-	Sep 15 16:29:28 2014
+	Sep 18 21:25:48 2014
 
 drvBulkDescriptors (D:\GitHub\TPiBridge\iLib\drvBulkDescriptors.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:02 2014
 
 drvGPIO (D:\GitHub\TPiBridge\TPiBridge\Debug\drvGPIO.r30)
-	Sep 15 16:29:28 2014
+	Sep 18 21:25:48 2014
 
 drvIR (D:\GitHub\TPiBridge\TPiBridge\Debug\drvIR.r30)
-	Sep 15 16:29:28 2014
+	Sep 18 21:25:48 2014
 
 drvLCD (D:\GitHub\TPiBridge\TPiBridge\Debug\drvLCD.r30)
-	Sep 15 16:29:28 2014
+	Sep 18 21:25:49 2014
 
 drvMCU (D:\GitHub\TPiBridge\TPiBridge\Debug\drvMCU.r30)
-	Sep 15 16:29:28 2014
+	Sep 18 21:25:49 2014
 
 drvTPiDE (D:\GitHub\TPiBridge\iLib\drvTPiDE.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:01 2014
 
 IIC (D:\GitHub\TPiBridge\iLib\IIC.r30)
-	Sep 15 16:28:49 2014
+	Sep 18 21:25:00 2014
 
 IIC_HAL (D:\GitHub\TPiBridge\iLib\IIC_HAL.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:01 2014
 
 IIC_HAL_MM_M16C6C (D:\GitHub\TPiBridge\iLib\IIC_HAL_MM_M16C6C.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:01 2014
 
 IIC_HAL_UART_M16C6C (D:\GitHub\TPiBridge\iLib\IIC_HAL_UART_M16C6C.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:01 2014
 
 main (D:\GitHub\TPiBridge\TPiBridge\Debug\main.r30)
-	Sep 15 16:29:28 2014
+	Sep 18 21:25:48 2014
 
 usb_cdc (D:\GitHub\TPiBridge\iLib\usb_cdc.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:02 2014
 
 usb_core (D:\GitHub\TPiBridge\iLib\usb_core.r30)
-	Sep 15 16:28:51 2014
+	Sep 18 21:25:02 2014
 
 usb_hal (D:\GitHub\TPiBridge\iLib\usb_hal.r30)
-	Sep 15 16:28:51 2014
+	Sep 18 21:25:02 2014
 
 drvTimer (D:\GitHub\TPiBridge\iLib\drvTimer.r30)
-	Sep 15 16:28:50 2014
+	Sep 18 21:25:01 2014
 
 drvTimer (D:\GitHub\TPiBridge\TPiBridge\Debug\drvTimer.r30)
-	Sep 15 16:29:29 2014
+	Sep 18 21:25:49 2014
 
 _i4divu (c:\program files (x86)\renesas\hew\tools\renesas\nc30wa\v545r01\lib30\nc30lib.lib)
 	Jan  6 15:04:38 2010
@@ -145,29 +145,29 @@ data_NE                          REL DATA    000400 000000 2     ncrt0
 bss_NE                           REL DATA    000490 000000 2     ncrt0
                                  REL DATA    000490 000204 2     appUSB
                                  REL DATA    000694 000902 2     drvIR
-                                 REL DATA    000F96 000258 2     drvTPiDE
-                                 REL DATA    0011EE 00004A 2     IIC
-                                 REL DATA    001238 000004 2     IIC_HAL_MM_M16C6C
-                                 REL DATA    00123C 000004 2     IIC_HAL_UART_M16C6C
-                                 REL DATA    001240 000008 2     usb_core
-                                 REL DATA    001248 000006 2     drvTimer
-                                 REL DATA    00124E 000004 2     fprintf
-                                 REL DATA    001252 00003C 2     init
-                                 REL DATA    00128E 000008 2     mdata
-                                 REL DATA    001296 000108 2     print
-data_NO                          REL DATA    00139E 000000       ncrt0
-                                 REL DATA    00139E 000013       usb_cdc
-                                 REL DATA    0013B1 00000D       usb_hal
-bss_NO                           REL DATA    0013BE 000000       ncrt0
-                                 REL DATA    0013BE 000002       drvIR
-                                 REL DATA    0013C0 000002       drvTPiDE
-                                 REL DATA    0013C2 000004       IIC_HAL_UART_M16C6C
-                                 REL DATA    0013C6 000001       main
-                                 REL DATA    0013C7 00000E       usb_cdc
-                                 REL DATA    0013D5 00026A       print
-istack                           REL DATA    001640 000300 2     ncrt0
-stack                            REL DATA    001940 000300 2     ncrt0
-heap                             REL DATA    001C40 000300       ncrt0
+                                 REL DATA    000F96 00025E 2     drvTPiDE
+                                 REL DATA    0011F4 00004A 2     IIC
+                                 REL DATA    00123E 000004 2     IIC_HAL_MM_M16C6C
+                                 REL DATA    001242 000004 2     IIC_HAL_UART_M16C6C
+                                 REL DATA    001246 000008 2     usb_core
+                                 REL DATA    00124E 000006 2     drvTimer
+                                 REL DATA    001254 000004 2     fprintf
+                                 REL DATA    001258 00003C 2     init
+                                 REL DATA    001294 000008 2     mdata
+                                 REL DATA    00129C 000108 2     print
+data_NO                          REL DATA    0013A4 000000       ncrt0
+                                 REL DATA    0013A4 000013       usb_cdc
+                                 REL DATA    0013B7 00000D       usb_hal
+bss_NO                           REL DATA    0013C4 000000       ncrt0
+                                 REL DATA    0013C4 000002       drvIR
+                                 REL DATA    0013C6 000002       drvTPiDE
+                                 REL DATA    0013C8 000004       IIC_HAL_UART_M16C6C
+                                 REL DATA    0013CC 000001       main
+                                 REL DATA    0013CD 00000E       usb_cdc
+                                 REL DATA    0013DB 00026A       print
+istack                           REL DATA    001646 000300 2     ncrt0
+stack                            REL DATA    001946 000300 2     ncrt0
+heap                             REL DATA    001C46 000300       ncrt0
 rom_FE                           ABS ROMDATA 080000 000000       ncrt0
                                  REL ROMDATA 080000 00004E 2     drvBulkDescriptors
                                  REL ROMDATA 08004E 000014 2     IIC
@@ -201,44 +201,44 @@ program                          REL CODE    080C2A 000000 2     ncrt0
                                  REL CODE    080DDC 0000B7 2     drvIR
                                  REL CODE    080E94 00029A 2     drvLCD
                                  REL CODE    08112E 00004E 2     drvMCU
-                                 REL CODE    08117C 000861 2     drvTPiDE
-                                 REL CODE    0819DE 000D36 2     IIC
-                                 REL CODE    082714 000021 2     IIC_HAL
-                                 REL CODE    082736 000467 2     IIC_HAL_MM_M16C6C
-                                 REL CODE    082B9E 00050E 2     IIC_HAL_UART_M16C6C
-                                 REL CODE    0830AC 00011D 2     main
-                                 REL CODE    0831CA 000665 2     usb_cdc
-                                 REL CODE    083830 000519 2     usb_core
-                                 REL CODE    083D4A 000CB1 2     usb_hal
-                                 REL CODE    0849FC 00004B 2     drvTimer
-                                 REL CODE    084A48 00002B 2     drvTimer
-                                 REL CODE    084A74 00004D 2     _i4divu
-                                 REL CODE    084AC2 000003 2     abort
-                                 REL CODE    084AC6 0000D3 2     fprintf
-                                 REL CODE    084B9A 000080 2     fputc
-                                 REL CODE    084C1A 00009D 2     init
-                                 REL CODE    084CB8 001969 2     print
-                                 REL CODE    086622 0000CD 2     printf
-                                 REL CODE    0866F0 00002B 2     strlen
-                                 REL CODE    08671C 00007C 2     _f8eq
-                                 REL CODE    086798 0000A7 2     _f8ge
-                                 REL CODE    086840 0000A7 2     _f8lt
-                                 REL CODE    0868E8 0002C7 2     _f8mul
-                                 REL CODE    086BB0 00007C 2     _f8ne
-                                 REL CODE    086C2C 00004B 2     _i4modu
-                                 REL CODE    086C78 0000F8 2     _i8divu
-                                 REL CODE    086D70 0000CF 2     _i8modu
-                                 REL CODE    086E40 00011F 2     device
-                                 REL CODE    086F60 000208 2     fgetc
-interrupt                        REL CODE    087168 000000 2     ncrt0
-                                 REL CODE    087168 0000A7       ncrt0
-program_S                        REL CODE    087210 000000 2     ncrt0
+                                 REL CODE    08117C 00090F 2     drvTPiDE
+                                 REL CODE    081A8C 000D36 2     IIC
+                                 REL CODE    0827C2 000021 2     IIC_HAL
+                                 REL CODE    0827E4 000467 2     IIC_HAL_MM_M16C6C
+                                 REL CODE    082C4C 00050E 2     IIC_HAL_UART_M16C6C
+                                 REL CODE    08315A 00018B 2     main
+                                 REL CODE    0832E6 000665 2     usb_cdc
+                                 REL CODE    08394C 000519 2     usb_core
+                                 REL CODE    083E66 000CB1 2     usb_hal
+                                 REL CODE    084B18 00004B 2     drvTimer
+                                 REL CODE    084B64 00002B 2     drvTimer
+                                 REL CODE    084B90 00004D 2     _i4divu
+                                 REL CODE    084BDE 000003 2     abort
+                                 REL CODE    084BE2 0000D3 2     fprintf
+                                 REL CODE    084CB6 000080 2     fputc
+                                 REL CODE    084D36 00009D 2     init
+                                 REL CODE    084DD4 001969 2     print
+                                 REL CODE    08673E 0000CD 2     printf
+                                 REL CODE    08680C 00002B 2     strlen
+                                 REL CODE    086838 00007C 2     _f8eq
+                                 REL CODE    0868B4 0000A7 2     _f8ge
+                                 REL CODE    08695C 0000A7 2     _f8lt
+                                 REL CODE    086A04 0002C7 2     _f8mul
+                                 REL CODE    086CCC 00007C 2     _f8ne
+                                 REL CODE    086D48 00004B 2     _i4modu
+                                 REL CODE    086D94 0000F8 2     _i8divu
+                                 REL CODE    086E8C 0000CF 2     _i8modu
+                                 REL CODE    086F5C 00011F 2     device
+                                 REL CODE    08707C 000208 2     fgetc
+interrupt                        REL CODE    087284 000000 2     ncrt0
+                                 REL CODE    087284 0000A7       ncrt0
+program_S                        REL CODE    08732C 000000 2     ncrt0
 vector                           ABS ROMDATA 0FFD00 000100       ncrt0
 fvector                          ABS ROMDATA 0FFFDC 000024       ncrt0
 # Total -------------------------------------------------------------------
-                                     DATA           001B3F(0006975) Byte(s)
+                                     DATA           001B45(0006981) Byte(s)
                                      ROMDATA        000D4D(0003405) Byte(s)
-                                     CODE           0065E5(0026085) Byte(s)
+                                     CODE           006701(0026369) Byte(s)
 
 ##########################################
 # VARIABLE VECTOR TABLE INFORMATION      #
@@ -270,56 +270,57 @@ No.  Address               No.  Address               No.  Address
 ##########################################
 # (3) GLOBAL LABEL INFORMATION           #
 ##########################################
-$CBDoneBulkRead    080d3a  $CB_Done_Dummy     082558  $CB_Read_Dummy     082560
-$IIC_Close         081b12  $IIC_GetStatus     081f0e  $IIC_HAL_Get_API   082714
-$IIC_Open          0819f4  $IIC_Read          081e4c  $IIC_Reset         081b8a
-$IIC_SetCallBack   081caa  $IIC_SetSlaveAdd   081ce0  $IIC_SlaveConfig   0824da
-$IIC_Stop          081ec4  $IIC_WaitComplet   081f3c  $IIC_Write         081d22
-$IIC_WriteNoStar   081dca  $IIC_WriteNoStop   081d76  $USBCDC_PutChar    0832cc
-$USBCORE_Init      083830  $USBHAL_Cancel     0840f0  $USBHAL_Control_   083de4
-$USBHAL_Control_   083e42  $_f8geti           0862f6  $_inmod            086506
-$_pput             086f18  $_sput             086efe  $drvADC_Go         080d92
+$CBDoneBulkRead    080d3a  $CB_Done_Dummy     082606  $CB_Read_Dummy     08260e
+$IIC_Close         081bc0  $IIC_GetStatus     081fbc  $IIC_HAL_Get_API   0827c2
+$IIC_Open          081aa2  $IIC_Read          081efa  $IIC_Reset         081c38
+$IIC_SetCallBack   081d58  $IIC_SetSlaveAdd   081d8e  $IIC_SlaveConfig   082588
+$IIC_Stop          081f72  $IIC_WaitComplet   081fea  $IIC_Write         081dd0
+$IIC_WriteNoStar   081e78  $IIC_WriteNoStop   081e24  $USBCDC_PutChar    0833e8
+$USBCORE_Init      08394c  $USBHAL_Cancel     08420c  $USBHAL_Control_   083f00
+$USBHAL_Control_   083f5e  $_f8geti           086412  $_inmod            086622
+$_pput             087034  $_sput             08701a  $drvADC_Go         080d92
 $drvLCD_WriteCom   08105e  $drvLCD_WriteCom   08108a  $drvLCD_WriteDat   0810ce
-$drvLCD_WriteDat   0810f2  $drvTimerB0Count   084a0e  $drvTimer_Init     084a48
-$exit              08720c  $fputc             084b9a  $henkan1           086152
-$henkan2           086194  $init_dev          086e40  $speed             086e62
-_CB_Start_Dummy    082556  _CB_Write_Dummy    082568  _IIC_HAL_MM_Get_   082736
-_IIC_HAL_MM_Int    082830  _IIC_HAL_UART_Ge   082b9e  _IIC_HAL_UART_In   082d3a
-_IIC_HAL_UART_In   082d48  _IIC_HAL_UART_In   082d28  _INT1Handler       080e12
-_TimerA0Handler    084a6a  _TimerA2Handler    080e1a  _TimerB0Interrup   084a36
-_TimerInterruptH   08318c  _USBCDC_Cancel     083474  _USBCDC_GetChar    0832a2
-_USBCDC_Init       0831ca  _USBCDC_IsConnec   083260  _USBCDC_IsOnLine   083264
-_USBCDC_Read       0833a6  _USBCDC_Read_Asy   08341c  _USBCDC_Write      0832ea
-_USBCDC_WriteStr   083270  _USBCDC_Write_As   08334e  _USBHALInterrupt   08458e
-_USBHALInterrupt   08462c  _USBHALInterrupt   084648  _USBHAL_Bulk_IN    083f3c
-_USBHAL_Bulk_IN_   084064  _USBHAL_Bulk_OUT   083eb0  _USBHAL_Bulk_OUT   08407c
-_USBHAL_Config_G   0840ac  _USBHAL_Config_S   0840b6  _USBHAL_Control_   083db8
-_USBHAL_Control_   08404c  _USBHAL_Init       083d64  _USBHAL_Interrup   083fc4
-_USBHAL_Interrup   084094  _USBHAL_Reset      08418e  __ctype            080a78
-__f8eq             08671c  __f8ge             086798  __f8lt             086840
-__f8mul            0868e8  __f8ne             086bb0  __f8prn            085bf6
-__i4divU           084a74  __i4modU           086c2c  __i8divU           086c78
-__i8modU           086d70  __init             084c1a  __iob              001252
-__memt             000488  __mnext            00128e  __msize            001292
-__pool             000480  __pri              0861e8  __print            084cb8
-__sget             086eee  __usb_int0         080d54  __usb_int1         080d5e
-__usb_resume       080d68  _abort             084ac2  _appGetChar        080c3c
-_appKbHit          080c2a  _appPutBuf         080cbc  _appUSBWaitIdle    080d2c
-_appUSBWrite       080cf4  _drvADC_Init       080d82  _drvGPIO_Init      080dac
+$drvLCD_WriteDat   0810f2  $drvTimerB0Count   084b2a  $drvTimer_Init     084b64
+$exit              087328  $fputc             084cb6  $henkan1           08626e
+$henkan2           0862b0  $init_dev          086f5c  $speed             086f7e
+_CB_Start_Dummy    082604  _CB_Write_Dummy    082616  _IIC_HAL_MM_Get_   0827e4
+_IIC_HAL_MM_Int    0828de  _IIC_HAL_UART_Ge   082c4c  _IIC_HAL_UART_In   082de8
+_IIC_HAL_UART_In   082df6  _IIC_HAL_UART_In   082dd6  _INT1Handler       080e12
+_TimerA0Handler    084b86  _TimerA2Handler    080e1a  _TimerB0Interrup   084b52
+_TimerInterruptH   0832a8  _USBCDC_Cancel     083590  _USBCDC_GetChar    0833be
+_USBCDC_Init       0832e6  _USBCDC_IsConnec   08337c  _USBCDC_IsOnLine   083380
+_USBCDC_Read       0834c2  _USBCDC_Read_Asy   083538  _USBCDC_Write      083406
+_USBCDC_WriteStr   08338c  _USBCDC_Write_As   08346a  _USBHALInterrupt   0846aa
+_USBHALInterrupt   084748  _USBHALInterrupt   084764  _USBHAL_Bulk_IN    084058
+_USBHAL_Bulk_IN_   084180  _USBHAL_Bulk_OUT   083fcc  _USBHAL_Bulk_OUT   084198
+_USBHAL_Config_G   0841c8  _USBHAL_Config_S   0841d2  _USBHAL_Control_   083ed4
+_USBHAL_Control_   084168  _USBHAL_Init       083e80  _USBHAL_Interrup   0840e0
+_USBHAL_Interrup   0841b0  _USBHAL_Reset      0842aa  __ctype            080a78
+__f8eq             086838  __f8ge             0868b4  __f8lt             08695c
+__f8mul            086a04  __f8ne             086ccc  __f8prn            085d12
+__i4divU           084b90  __i4modU           086d48  __i8divU           086d94
+__i8modU           086e8c  __init             084d36  __iob              001258
+__memt             000488  __mnext            001294  __msize            001298
+__pool             000480  __pri              086304  __print            084dd4
+__sget             08700a  __usb_int0         080d54  __usb_int1         080d5e
+__usb_resume       080d68  _abort             084bde  _appGetChar        080c3c
+_appKbHit          080c2a  _appPutBuf         080cbc  _appUSBWrite       080cf4
+_appUSB_IsIdle     080d2c  _drvADC_Init       080d82  _drvGPIO_Init      080dac
 _drvIR_Init        080ddc  _drvLCD_Init       080e94  _drvMCU_IE         081176
-_drvMCU_Init       08112e  _drvTPiDE_Init     08117c  _drvTPiDE_Schedu   0811a6
-_drvTPiDE_Tickin   0815e2  _drvTimerB0Count   084a08  _drvTimerB0RunTi   084a1c
-_drvTimerB0RunTi   084a26  _drvTimerB0Start   084a02  _drvTimerB0Stop    0849fc
-_exit              08720c  _fgetc             086f60  _fprintf           084ac6
+_drvMCU_Init       08112e  _drvTPiDE_Init     08117c  _drvTPiDE_Schedu   0811b2
+_drvTPiDE_Tickin   081696  _drvTimerB0Count   084b24  _drvTimerB0RunTi   084b38
+_drvTimerB0RunTi   084b42  _drvTimerB0Start   084b1e  _drvTimerB0Stop    084b18
+_exit              087328  _fgetc             08707c  _fprintf           084be2
 _gConfigurationD   080006  _gDeviceDescript   080000  _gStringDescript   0800da
 _gStringDescript   08000c  _gStringDescript   080012  _gStringDescript   080018
 _g_acISPBuf        000494  _g_awIrCapture     000796  _g_awIrPattern     000696
-_g_cIrRecorded     0013be  _g_cTPiDE          0013c0  _g_dwRxSize        000490
-_g_wCaptureCnt     000694  _gau8ConfigDescr   0800de  _gau8DeviceDescr   08001e
-_gau8ProductStri   08003a  _gau8StringSeria   080044  _gau8VendorStrin   080030
-_halIICGetStatus   0819de  _halIsUSBConfigO   083d5a  _halIsUSBDetach    083d50
-_halUSBDetach      083d4a  _main              0830ac  _printf            086622
-_strlen            0866f0  dummy_int          08720e  start              087168
+_g_cIrRecorded     0013c4  _g_cTPiDE          0013c6  _g_dwRxSize        000490
+_g_pacInfo         000f98  _g_wCaptureCnt     000694  _g_wInfoCnt        000f96
+_gau8ConfigDescr   0800de  _gau8DeviceDescr   08001e  _gau8ProductStri   08003a
+_gau8StringSeria   080044  _gau8VendorStrin   080030  _halIICGetStatus   081a8c
+_halIsUSBConfigO   083e76  _halIsUSBDetach    083e6c  _halUSBDetach      083e66
+_main              08315a  _printf            08673e  _strlen            08680c
+dummy_int          08732a  start              087284  
 
 ##########################################
 # (4) GLOBAL EQU SYMBOL INFORMATION      #
@@ -474,17 +475,17 @@ bss_SO
 data_NE
                                   00000400  0000048f        90   2
 bss_NE
-                                  00000490  0000139d       f0e   2
+                                  00000490  000013a3       f14   2
 data_NO
-                                  0000139e  000013bd        20   1
+                                  000013a4  000013c3        20   1
 bss_NO
-                                  000013be  0000163e       281   1
+                                  000013c4  00001644       281   1
 istack
-                                  00001640  0000193f       300   2
+                                  00001646  00001945       300   2
 stack
-                                  00001940  00001c3f       300   2
+                                  00001946  00001c45       300   2
 heap
-                                  00001c40  00001f3f       300   1
+                                  00001c46  00001f45       300   1
 rom_FE
                                   00080000  000800dd        de   1
 rom_FO
@@ -498,11 +499,11 @@ data_NEI
 data_NOI
                                   00080c0a  00080c29        20   1
 program
-                                  00080c2a  00087167      653e   2
+                                  00080c2a  00087283      665a   2
 interrupt
-                                  00087168  0008720e        a7   2
+                                  00087284  0008732a        a7   2
 program_S
-                                  00087210  00087210         0   2
+                                  0008732c  0008732c         0   2
 vector
                                   000ffd00  000ffdff       100   1
 fvector
@@ -544,32 +545,39 @@ FILE=D:/GitHub/TPiBridge/iDrv/drvIR
                                   00000796       800   data ,g         0
 
 FILE=init
-                                  00001252  0000128d        3c
+                                  00001258  00001293        3c
   __iob
-                                  00001252         0   none ,g         0
+                                  00001258         0   none ,g         0
 
 FILE=mdata
-                                  0000128e  00001295         8
+                                  00001294  0000129b         8
   __mnext
-                                  0000128e         0   none ,g         0
+                                  00001294         0   none ,g         0
   __msize
-                                  00001292         0   none ,g         0
+                                  00001298         0   none ,g         0
 
 FILE=appUSB
                                   00000490  00000693       204
   _g_acISPBuf
                                   00000494         0   none ,g         0
 
+FILE=drvTPiDE
+                                  00000f96  000011f3       25e
+  _g_pacInfo
+                                  00000f98         0   none ,g         0
+  _g_wInfoCnt
+                                  00000f96         0   none ,g         0
+
 SECTION=bss_NO
 FILE=ncrt0
-                                  000013be  000013be         0
+                                  000013c4  000013c4         0
   _g_cIrRecorded
-                                  000013be         1   data ,g         0
+                                  000013c4         1   data ,g         0
 
 FILE=drvTPiDE
-                                  000013c0  000013c1         2
+                                  000013c6  000013c7         2
   _g_cTPiDE
-                                  000013c0         0   none ,g         0
+                                  000013c6         0   none ,g         0
 
 SECTION=rom_FE
 FILE=ncrt0
@@ -660,134 +668,136 @@ FILE=D:/GitHub/TPiBridge/iDrv/drvMCU
                                   00081176         6   func ,g         0
 
 FILE=D:/GitHub/TPiBridge/iApp/main
-                                  000830ac  000831c8       11d
+                                  0008315a  000832e4       18b
   _main
-                                  000830ac        df   func ,g         0
+                                  0008315a       14e   func ,g         0
+  _TimerInterruptHandler
+                                  000832a8        3d   func ,g         0
 
 FILE=D:/GitHub/TPiBridge/iDrv/drvTimer
-                                  000849fc  00084a46        4b
+                                  00084b18  00084b62        4b
   $drvTimerB0CountSet
-                                  00084a0e         0   none ,g         0
+                                  00084b2a         0   none ,g         0
   _TimerB0InterruptHandler
-                                  00084a36         0   none ,g         0
+                                  00084b52         0   none ,g         0
   _drvTimerB0CountGet
-                                  00084a08         0   none ,g         0
+                                  00084b24         0   none ,g         0
   _drvTimerB0RunTimeGet
-                                  00084a1c         0   none ,g         0
+                                  00084b38         0   none ,g         0
   _drvTimerB0RunTimeSet
-                                  00084a26         0   none ,g         0
+                                  00084b42         0   none ,g         0
   _drvTimerB0Start
-                                  00084a02         0   none ,g         0
+                                  00084b1e         0   none ,g         0
   _drvTimerB0Stop
-                                  000849fc         0   none ,g         0
+                                  00084b18         0   none ,g         0
 
 FILE=_i4divu
-                                  00084a74  00084ac0        4d
+                                  00084b90  00084bdc        4d
   __i4divU
-                                  00084a74        4d   func ,g         0
+                                  00084b90        4d   func ,g         0
 
 FILE=abort
-                                  00084ac2  00084ac4         3
+                                  00084bde  00084be0         3
   _abort
-                                  00084ac2         3   func ,g         0
+                                  00084bde         3   func ,g         0
 
 FILE=fprintf
-                                  00084ac6  00084b98        d3
+                                  00084be2  00084cb4        d3
   _fprintf
-                                  00084ac6        c3   func ,g         0
+                                  00084be2        c3   func ,g         0
 
 FILE=fputc
-                                  00084b9a  00084c19        80
+                                  00084cb6  00084d35        80
   $fputc
-                                  00084b9a        80   func ,g         0
+                                  00084cb6        80   func ,g         0
 
 FILE=init
-                                  00084c1a  00084cb6        9d
+                                  00084d36  00084dd2        9d
   __init
-                                  00084c1a        9d   func ,g         0
+                                  00084d36        9d   func ,g         0
 
 FILE=print
-                                  00084cb8  00086620      1969
+                                  00084dd4  0008673c      1969
   __print
-                                  00084cb8       f3e   func ,g         0
+                                  00084dd4       f3e   func ,g         0
   __f8prn
-                                  00085bf6       55b   func ,g         0
+                                  00085d12       55b   func ,g         0
   $henkan1
-                                  00086152        42   func ,g         0
+                                  0008626e        42   func ,g         0
   $henkan2
-                                  00086194        55   func ,g         0
+                                  000862b0        55   func ,g         0
   __pri
-                                  000861e8       10e   func ,g         0
+                                  00086304       10e   func ,g         0
   $_f8geti
-                                  000862f6       20f   func ,g         0
+                                  00086412       20f   func ,g         0
 
 FILE=printf
-                                  00086622  000866ee        cd
+                                  0008673e  0008680a        cd
   _printf
-                                  00086622        bd   func ,g         0
+                                  0008673e        bd   func ,g         0
 
 FILE=strlen
-                                  000866f0  0008671a        2b
+                                  0008680c  00086836        2b
   _strlen
-                                  000866f0        2b   func ,g         0
+                                  0008680c        2b   func ,g         0
 
 FILE=_f8eq
-                                  0008671c  00086797        7c
+                                  00086838  000868b3        7c
   __f8eq
-                                  0008671c        7c   func ,g         0
+                                  00086838        7c   func ,g         0
 
 FILE=_f8ge
-                                  00086798  0008683e        a7
+                                  000868b4  0008695a        a7
   __f8ge
-                                  00086798        a7   func ,g         0
+                                  000868b4        a7   func ,g         0
 
 FILE=_f8lt
-                                  00086840  000868e6        a7
+                                  0008695c  00086a02        a7
   __f8lt
-                                  00086840        a7   func ,g         0
+                                  0008695c        a7   func ,g         0
 
 FILE=_f8mul
-                                  000868e8  00086bae       2c7
+                                  00086a04  00086cca       2c7
   __f8mul
-                                  000868e8       2c7   func ,g         0
+                                  00086a04       2c7   func ,g         0
 
 FILE=_f8ne
-                                  00086bb0  00086c2b        7c
+                                  00086ccc  00086d47        7c
   __f8ne
-                                  00086bb0        7c   func ,g         0
+                                  00086ccc        7c   func ,g         0
 
 FILE=_i4modu
-                                  00086c2c  00086c76        4b
+                                  00086d48  00086d92        4b
   __i4modU
-                                  00086c2c        4b   func ,g         0
+                                  00086d48        4b   func ,g         0
 
 FILE=_i8divu
-                                  00086c78  00086d6f        f8
+                                  00086d94  00086e8b        f8
   __i8divU
-                                  00086c78        f8   func ,g         0
+                                  00086d94        f8   func ,g         0
 
 FILE=_i8modu
-                                  00086d70  00086e3e        cf
+                                  00086e8c  00086f5a        cf
   __i8modU
-                                  00086d70        cf   func ,g         0
+                                  00086e8c        cf   func ,g         0
 
 FILE=device
-                                  00086e40  00086f5e       11f
+                                  00086f5c  0008707a       11f
   $init_dev
-                                  00086e40        21   func ,g         0
+                                  00086f5c        21   func ,g         0
   $speed
-                                  00086e62        8d   func ,g         0
+                                  00086f7e        8d   func ,g         0
   __sget
-                                  00086eee         f   func ,g         0
+                                  0008700a         f   func ,g         0
   $_sput
-                                  00086efe        1b   func ,g         0
+                                  0008701a        1b   func ,g         0
   $_pput
-                                  00086f18        47   func ,g         0
+                                  00087034        47   func ,g         0
 
 FILE=fgetc
-                                  00086f60  00087167       208
+                                  0008707c  00087283       208
   _fgetc
-                                  00086f60       208   func ,g         0
+                                  0008707c       208   func ,g         0
 
 FILE=appUSB
                                   00080c2a  00080d81       158
@@ -803,169 +813,169 @@ FILE=appUSB
                                   00080c3c         0   none ,g         0
   _appPutBuf
                                   00080cbc         0   none ,g         0
-  _appUSBWaitIdle
-                                  00080d2c         0   none ,g         0
   _appUSBWrite
                                   00080cf4         0   none ,g         0
+  _appUSB_IsIdle
+                                  00080d2c         0   none ,g         0
 
 FILE=drvTPiDE
-                                  0008117c  000819dc       861
+                                  0008117c  00081a8a       90f
   _drvTPiDE_Init
                                   0008117c         0   none ,g         0
   _drvTPiDE_Scheduler
-                                  000811a6         0   none ,g         0
+                                  000811b2         0   none ,g         0
   _drvTPiDE_Ticking
-                                  000815e2         0   none ,g         0
+                                  00081696         0   none ,g         0
 
 FILE=IIC
-                                  000819de  00082713       d36
+                                  00081a8c  000827c1       d36
   $CB_Done_Dummy
-                                  00082558         0   none ,g         0
+                                  00082606         0   none ,g         0
   $CB_Read_Dummy
-                                  00082560         0   none ,g         0
+                                  0008260e         0   none ,g         0
   $IIC_Close
-                                  00081b12         0   none ,g         0
+                                  00081bc0         0   none ,g         0
   $IIC_GetStatus
-                                  00081f0e         0   none ,g         0
+                                  00081fbc         0   none ,g         0
   $IIC_Open
-                                  000819f4         0   none ,g         0
+                                  00081aa2         0   none ,g         0
   $IIC_Read
-                                  00081e4c         0   none ,g         0
+                                  00081efa         0   none ,g         0
   $IIC_Reset
-                                  00081b8a         0   none ,g         0
+                                  00081c38         0   none ,g         0
   $IIC_SetCallBackDone
-                                  00081caa         0   none ,g         0
+                                  00081d58         0   none ,g         0
   $IIC_SetSlaveAddr
-                                  00081ce0         0   none ,g         0
+                                  00081d8e         0   none ,g         0
   $IIC_SlaveConfig
-                                  000824da         0   none ,g         0
+                                  00082588         0   none ,g         0
   $IIC_Stop
-                                  00081ec4         0   none ,g         0
+                                  00081f72         0   none ,g         0
   $IIC_WaitComplete
-                                  00081f3c         0   none ,g         0
+                                  00081fea         0   none ,g         0
   $IIC_Write
-                                  00081d22         0   none ,g         0
+                                  00081dd0         0   none ,g         0
   $IIC_WriteNoStart
-                                  00081dca         0   none ,g         0
+                                  00081e78         0   none ,g         0
   $IIC_WriteNoStop
-                                  00081d76         0   none ,g         0
+                                  00081e24         0   none ,g         0
   _CB_Start_Dummy
-                                  00082556         0   none ,g         0
+                                  00082604         0   none ,g         0
   _CB_Write_Dummy
-                                  00082568         0   none ,g         0
+                                  00082616         0   none ,g         0
   _halIICGetStatus
-                                  000819de         0   none ,g         0
+                                  00081a8c         0   none ,g         0
 
 FILE=IIC_HAL
-                                  00082714  00082734        21
+                                  000827c2  000827e2        21
   $IIC_HAL_Get_API
-                                  00082714         0   none ,g         0
+                                  000827c2         0   none ,g         0
 
 FILE=IIC_HAL_MM_M16C6C
-                                  00082736  00082b9c       467
+                                  000827e4  00082c4a       467
   _IIC_HAL_MM_Get_API
-                                  00082736         0   none ,g         0
+                                  000827e4         0   none ,g         0
   _IIC_HAL_MM_Int
-                                  00082830         0   none ,g         0
+                                  000828de         0   none ,g         0
 
 FILE=IIC_HAL_UART_M16C6C
-                                  00082b9e  000830ab       50e
+                                  00082c4c  00083159       50e
   _IIC_HAL_UART_Get_API
-                                  00082b9e         0   none ,g         0
+                                  00082c4c         0   none ,g         0
   _IIC_HAL_UART_Int_ACK
-                                  00082d3a         0   none ,g         0
+                                  00082de8         0   none ,g         0
   _IIC_HAL_UART_Int_NACK
-                                  00082d48         0   none ,g         0
+                                  00082df6         0   none ,g         0
   _IIC_HAL_UART_Int_StopStart
-                                  00082d28         0   none ,g         0
+                                  00082dd6         0   none ,g         0
 
 FILE=usb_cdc
-                                  000831ca  0008382e       665
+                                  000832e6  0008394a       665
   $USBCDC_PutChar
-                                  000832cc         0   none ,g         0
+                                  000833e8         0   none ,g         0
   _USBCDC_Cancel
-                                  00083474         0   none ,g         0
+                                  00083590         0   none ,g         0
   _USBCDC_GetChar
-                                  000832a2         0   none ,g         0
+                                  000833be         0   none ,g         0
   _USBCDC_Init
-                                  000831ca         0   none ,g         0
+                                  000832e6         0   none ,g         0
   _USBCDC_IsConnected
-                                  00083260         0   none ,g         0
+                                  0008337c         0   none ,g         0
   _USBCDC_IsOnLine
-                                  00083264         0   none ,g         0
+                                  00083380         0   none ,g         0
   _USBCDC_Read
-                                  000833a6         0   none ,g         0
+                                  000834c2         0   none ,g         0
   _USBCDC_Read_Async
-                                  0008341c         0   none ,g         0
+                                  00083538         0   none ,g         0
   _USBCDC_Write
-                                  000832ea         0   none ,g         0
+                                  00083406         0   none ,g         0
   _USBCDC_WriteString
-                                  00083270         0   none ,g         0
+                                  0008338c         0   none ,g         0
   _USBCDC_Write_Async
-                                  0008334e         0   none ,g         0
+                                  0008346a         0   none ,g         0
 
 FILE=usb_core
-                                  00083830  00083d48       519
+                                  0008394c  00083e64       519
   $USBCORE_Init
-                                  00083830         0   none ,g         0
+                                  0008394c         0   none ,g         0
 
 FILE=usb_hal
-                                  00083d4a  000849fa       cb1
+                                  00083e66  00084b16       cb1
   $USBHAL_Cancel
-                                  000840f0         0   none ,g         0
+                                  0008420c         0   none ,g         0
   $USBHAL_Control_IN
-                                  00083de4         0   none ,g         0
+                                  00083f00         0   none ,g         0
   $USBHAL_Control_OUT
-                                  00083e42         0   none ,g         0
+                                  00083f5e         0   none ,g         0
   _USBHALInterruptHandler
-                                  0008458e         0   none ,g         0
+                                  000846aa         0   none ,g         0
   _USBHALInterruptHandler2
-                                  0008462c         0   none ,g         0
+                                  00084748         0   none ,g         0
   _USBHALInterruptResume
-                                  00084648         0   none ,g         0
+                                  00084764         0   none ,g         0
   _USBHAL_Bulk_IN
-                                  00083f3c         0   none ,g         0
+                                  00084058         0   none ,g         0
   _USBHAL_Bulk_IN_Stall
-                                  00084064         0   none ,g         0
+                                  00084180         0   none ,g         0
   _USBHAL_Bulk_OUT
-                                  00083eb0         0   none ,g         0
+                                  00083fcc         0   none ,g         0
   _USBHAL_Bulk_OUT_Stall
-                                  0008407c         0   none ,g         0
+                                  00084198         0   none ,g         0
   _USBHAL_Config_Get
-                                  000840ac         0   none ,g         0
+                                  000841c8         0   none ,g         0
   _USBHAL_Config_Set
-                                  000840b6         0   none ,g         0
+                                  000841d2         0   none ,g         0
   _USBHAL_Control_ACK
-                                  00083db8         0   none ,g         0
+                                  00083ed4         0   none ,g         0
   _USBHAL_Control_Stall
-                                  0008404c         0   none ,g         0
+                                  00084168         0   none ,g         0
   _USBHAL_Init
-                                  00083d64         0   none ,g         0
+                                  00083e80         0   none ,g         0
   _USBHAL_Interrupt_IN
-                                  00083fc4         0   none ,g         0
+                                  000840e0         0   none ,g         0
   _USBHAL_Interrupt_IN_Stall
-                                  00084094         0   none ,g         0
+                                  000841b0         0   none ,g         0
   _USBHAL_Reset
-                                  0008418e         0   none ,g         0
+                                  000842aa         0   none ,g         0
   _halIsUSBConfigOK
-                                  00083d5a         0   none ,g         0
+                                  00083e76         0   none ,g         0
   _halIsUSBDetach
-                                  00083d50         0   none ,g         0
+                                  00083e6c         0   none ,g         0
   _halUSBDetach
-                                  00083d4a         0   none ,g         0
+                                  00083e66         0   none ,g         0
 
 FILE=drvTimer
-                                  00084a48  00084a72        2b
+                                  00084b64  00084b8e        2b
   $drvTimer_Init
-                                  00084a48        21   func ,g         0
+                                  00084b64        21   func ,g         0
 
 SECTION=interrupt
 FILE=ncrt0
-                                  00087168  0008720e        a7
+                                  00087284  0008732a        a7
   $exit
-                                  0008720c         0   none ,g         0
+                                  00087328         0   none ,g         0
   _exit
-                                  0008720c         0   none ,g         0
+                                  00087328         0   none ,g         0
   dummy_int
-                                  0008720e         0   none ,g         0
+                                  0008732a         0   none ,g         0
 

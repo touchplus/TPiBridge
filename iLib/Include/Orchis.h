@@ -37,6 +37,7 @@ typedef   signed short   INT16;
 
 //............................................................................
 
+typedef BYTE            BOOL;
 #define TRUE            1
 #define FALSE           0
 

@@ -38,6 +38,8 @@ typedef void(*CB_DONE_OUT)(INT16, DWORD);
 // ***************************************************************************
 extern volatile DWORD       g_dwRxSize;
 extern volatile BYTE        g_acISPBuf[ISP_PAGE_SIZE];
+extern volatile WORD        g_wInfoCnt;
+extern volatile BYTE *      g_pacInfo;
 
 
 // ***************************************************************************
@@ -63,6 +65,18 @@ void    drvTimerB0CountSet(WORD wDelay);
 void    drvTimerB0RunTimeSet(DWORD dwDelay);
 WORD    drvTimerB0CountGet(void);
 DWORD   drvTimerB0RunTimeGet(void);
+
+
+// Orchis2 -------------------------------------------------------------------
+// check if USB busy writing (BULK IN)
+//
+// Params:
+// none
+//
+// Return:
+// BOOL         - TRUE : idle
+// ---------------------------------------------------------------------------
+BOOL appUSB_IsIdle(void);
 
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

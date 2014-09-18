@@ -52,8 +52,11 @@ volatile static BYTE    cCnt500ms;
 // ---------------------------------------------------------------------------
 void main(void)
 {
+    BOOL        bIrReported = FALSE;
+    BYTE        cAdcState   = 0;
     WORD        i, wDelay;
-	BYTE		cConfigured = FALSE;
+    BYTE        cConfigured = FALSE;
+    BYTE        acAdcBuf[2];
 
 
     //!!!!!!!!!!!!!!!!! TPiBridge hardware initialization !!!!!!!!!!!!!!!!!!!!
@@ -63,7 +66,7 @@ void main(void)
      drvADC_Init();                         // TPiBridge ADC initialization
       drvIR_Init();                         // TPiBridge IR receiver initialization
      drvLCD_Init();                         // TPiBridge LCD initialization
-	 USBCDC_Init();                         // TPiBridge USB (CDC) driver initialization
+     USBCDC_Init();                         // TPiBridge USB (CDC) driver initialization
 
 
     //!!!!!!!!!!!!!!!!!! user application initialization !!!!!!!!!!!!!!!!!!!!!
@@ -80,25 +83,44 @@ void main(void)
 
     while(1) {
         if(halIsUSBConfigOK()) {
-		if(      !cConfigured) {
-			      cConfigured = TRUE;
+        if(      !cConfigured) {
+                  cConfigured = TRUE;
 
-			g_dwRxSize = 0;
-			USBCDC_Read_Async(ISP_BUFFER_SIZE, g_acISPBuf, CBDoneBulkRead);
+            g_dwRxSize = 0;
+            USBCDC_Read_Async(ISP_BUFFER_SIZE, g_acISPBuf, CBDoneBulkRead);
             drvTPiDE_Init();
-	        drvTimerB0Start();
-	        drvTimerB0CountSet(0);
+            drvTimerB0Start();
+            drvTimerB0CountSet(0);
         }
         else {
             drvTPiDE_Scheduler(); if(!appKbHit() ||
             drvTimerB0CountGet() >= 2) {
-	        drvTimerB0CountSet(0);
-		    drvTPiDE_Ticking();
-        }   }   }
+            drvTimerB0CountSet(0);
+            drvTPiDE_Ticking();
+        }
 
-    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! USER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! USER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //
+    // IR decorder waveform reporting
 
-        if(g_cIrRecorded) { LED1 ^= 1; g_cIrRecorded = FALSE; }
+         if(g_cIrRecorded)   {
+         if( !bIrReported)   {
+         if(appUSB_IsIdle()) {
+              bIrReported =    TRUE;
+              g_pacInfo   =   (BYTE *)g_awIrCapture;
+              g_wInfoCnt  =    g_wCaptureCnt * 2; } }
+    else if(  g_wInfoCnt == 0) g_cIrRecorded = bIrReported = FALSE; }
+
+
+    // ADC measurement result reporting.......................................
+
+    else {  switch( cAdcState++) {
+            case 0: drvADC_Go(0);                                           break;
+            case 1: acAdcBuf[ 0] = VIN;                                     break;
+            case 2: drvADC_Go(1);                                           break;
+            case 3: acAdcBuf[ 1] = CIN; cAdcState = 0; if(!appUSB_IsIdle()) break;
+                    g_pacInfo = acAdcBuf; g_wInfoCnt = 2;                   break;
+    }   }   }   }
 
         wDelay = CIN * 10;                  // ADC test
         da0 = 0xff;                         // DAC test
