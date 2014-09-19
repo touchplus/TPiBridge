@@ -26,6 +26,7 @@
 #include "iDrv\Include\drvMCU.h"            // function usage : drvMCU_Init
 #include "iDrv\Include\drvTimer.h"          // function usage : drvTimer_Init
 #include "iDrv\Include\drvGPIO.h"           // function usage : drvGPIO_Init
+#include "iDrv\Include\drvSPI.h"            // function usage : drvSPI_Init
 #include "iDrv\Include\drvADC.h"            // function usage : drvADC_Init
 #include "iDrv\Include\drvIR.h"             // function usage : drvIR_Init
 #include "iDrv\Include\drvLCD.h"            // function usage : drvLCD_Init
@@ -36,6 +37,8 @@
 // ******************** START OF PRIVATE DATA DECLARATIONS *******************
 // ***************************************************************************
 volatile static BYTE    cCnt500ms;
+volatile static BYTE    acSPI_TxBuf[16];
+volatile static BYTE    acSPI_RxBuf[16];
 
 
 // ***************************************************************************
@@ -61,12 +64,15 @@ void main(void)
 
     //!!!!!!!!!!!!!!!!! TPiBridge hardware initialization !!!!!!!!!!!!!!!!!!!!
 
-     drvMCU_Init();                         // TR16C0 system clock initialization
-    drvGPIO_Init();                         // TPiBridge I/O initialization
-     drvADC_Init();                         // TPiBridge ADC initialization
-      drvIR_Init();                         // TPiBridge IR receiver initialization
-     drvLCD_Init();                         // TPiBridge LCD initialization
-     USBCDC_Init();                         // TPiBridge USB (CDC) driver initialization
+     drvMCU_Init( );                        // TR16C0 system clock initialization
+    drvGPIO_Init( );                        // TPiBridge I/O initialization
+     drvSPI_Init(1);                        // TPiBridge SPI initialization
+     drvADC_Init( );                        // TPiBridge ADC initialization
+      drvIR_Init( );                        // TPiBridge IR receiver initialization
+     drvLCD_Init( );                        // TPiBridge LCD initialization
+     USBCDC_Init( );                        // TPiBridge USB (CDC) driver initialization
+
+    for(i = 0; i < 16; i++) acSPI_TxBuf[i] = i;
 
 
     //!!!!!!!!!!!!!!!!!! user application initialization !!!!!!!!!!!!!!!!!!!!!
@@ -141,6 +147,7 @@ void main(void)
 // ---------------------------------------------------------------------------
 void TimerInterruptHandler(void)
 {
+    drvSPI_Go(acSPI_TxBuf, acSPI_RxBuf, 16);
     if(++cCnt500ms == 50) { cCnt500ms = 0;
         LED0 ^= 1;
         if(LED0) drvLCD_WriteCommand(0x29);
