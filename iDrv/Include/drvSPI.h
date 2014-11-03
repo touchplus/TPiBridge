@@ -4,7 +4,7 @@
 // $RCSfile: drvSPI.h,v $
 // $Revision: 0.9 $
 // $Author: Albert Hu $
-// $Date: 2014/9/19 20:06:12 $
+// $Date: 2014/10/30 PM 07:56:21 $
 //
 // ---------------------------------------------------------------------------
 // >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -27,6 +27,9 @@
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
+typedef void(*CB_SPI)(void);
+
+
 // Orchis2 -------------------------------------------------------------------
 // SPI function initialization
 //
@@ -46,11 +49,12 @@ void drvSPI_Init(BYTE cMode);
 // pacTxBuf     - pointer to transmission buffer
 // pacRxBuf     - pointer to reception buffer
 // wCount       - byte count
+// cb           - callback function pointer
 //
 // Return:
 // none
 // ---------------------------------------------------------------------------
-void drvSPI_Go(BYTE * pacTxBuf, BYTE * pacRxBuf, WORD wCount);
+void drvSPI_Go(BYTE * pacTxBuf, BYTE * pacRxBuf, WORD wCount, CB_SPI cb);
 
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

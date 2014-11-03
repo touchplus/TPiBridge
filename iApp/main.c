@@ -39,6 +39,8 @@
 volatile static BYTE    cCnt500ms;
 volatile static BYTE    acSPI_TxBuf[16];
 volatile static BYTE    acSPI_RxBuf[16];
+const    static BYTE    acSignatureBL[8] = 
+                    { 0x01, 0x23, 0x45, 0x67, 0xff, 0xff, 0xff, 0xff };
 
 
 // ***************************************************************************
@@ -66,13 +68,11 @@ void main(void)
 
      drvMCU_Init( );                        // TR16C0 system clock initialization
     drvGPIO_Init( );                        // TPiBridge I/O initialization
-     drvSPI_Init(1);                        // TPiBridge SPI initialization
+     drvSPI_Init(0);                        // TPiBridge SPI initialization
      drvADC_Init( );                        // TPiBridge ADC initialization
       drvIR_Init( );                        // TPiBridge IR receiver initialization
      drvLCD_Init( );                        // TPiBridge LCD initialization
      USBCDC_Init( );                        // TPiBridge USB (CDC) driver initialization
-
-    for(i = 0; i < 16; i++) acSPI_TxBuf[i] = i;
 
 
     //!!!!!!!!!!!!!!!!!! user application initialization !!!!!!!!!!!!!!!!!!!!!
@@ -147,7 +147,6 @@ void main(void)
 // ---------------------------------------------------------------------------
 void TimerInterruptHandler(void)
 {
-    drvSPI_Go(acSPI_TxBuf, acSPI_RxBuf, 16);
     if(++cCnt500ms == 50) { cCnt500ms = 0;
         LED0 ^= 1;
         if(LED0) drvLCD_WriteCommand(0x29);

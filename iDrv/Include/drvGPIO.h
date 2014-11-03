@@ -4,7 +4,7 @@
 // $RCSfile: drvGPIO.h,v $
 // $Revision: 0.9 $
 // $Author: Albert Hu $
-// $Date: 2014/8/25 18:30:41 $
+// $Date: 2014/10/30 PM 07:55:32 $
 //
 // ---------------------------------------------------------------------------
 // >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -12,7 +12,6 @@
 // Copyright 2014 (c) Touchplus information Corp.
 //
 // Touchplus information Corp. owns the sole copyright to this software.
-// Under international copyright laws you
 // ---------------------------------------------------------------------------
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>> WARRANTEE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // ---------------------------------------------------------------------------
@@ -36,7 +35,8 @@
 #define DB          p6
 #define LED0        p8_6
 #define LED1        p8_7
-
+#define RST         p9_7
+#define CLK         p7_7
 
 // Orchis2 -------------------------------------------------------------------
 // GPIO initialization

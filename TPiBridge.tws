@@ -9,10 +9,12 @@
 [BREAKPOINTS]
 [OPEN_WORKSPACE_FILES]
 "D:\GitHub\TPiBridge\iApp\main.c" 
+"D:\GitHub\TPiBridge\iDrv\drvSPI.c" 
 "D:\GitHub\TPiBridge\TPiBridge\ncrt0.a30" 
 [WORKSPACE_FILE_STATES]
-"D:\GitHub\TPiBridge\TPiBridge\ncrt0.a30" 25 25 604 120 0 0 
-"D:\GitHub\TPiBridge\iApp\main.c" -8 -30 649 358 1 1 
+"D:\GitHub\TPiBridge\TPiBridge\ncrt0.a30" 75 75 1316 454 0 0 
+"D:\GitHub\TPiBridge\iApp\main.c" -8 -30 1561 721 1 1 
+"D:\GitHub\TPiBridge\iDrv\drvSPI.c" 50 50 1320 458 0 2 
 [LOADED_PROJECTS]
 "TPiBridge" 
 [END]

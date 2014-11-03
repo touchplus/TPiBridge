@@ -4,7 +4,7 @@
 // $RCSfile: drvGPIO.c,v $
 // $Revision: 0.9 $
 // $Author: Albert Hu $
-// $Date: 2014/8/25 18:30:41 $
+// $Date: 2014/10/30 PM 07:52:36 $
 //
 // ---------------------------------------------------------------------------
 // >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -12,7 +12,6 @@
 // Copyright 2014 (c) Touchplus information Corp.
 //
 // Touchplus information Corp. owns the sole copyright to this software.
-// Under international copyright laws you
 // ---------------------------------------------------------------------------
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>> WARRANTEE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // ---------------------------------------------------------------------------
@@ -51,13 +50,13 @@ void drvGPIO_Init(void)
                                             // P6_6 = DB6       ( default input )
                                             // P6_7 = DB7       ( default input )
 
-    pd7 = p7 = 0x0c;                        // P7_0 = SDA       ( default input )
+    pd7 = p7 = 0x4c;                        // P7_0 = SDA       ( default input )
                                             // P7_1 = SCL       ( default input )
                                             // P7_2 = DB_CS     ( default output)
                                             // P7_3 = DB_RS     ( default output)
                                             // P7_4 = BTN0      ( default input )
                                             // P7_5 = BTN1      ( default input )
-                                            // P7_6 = TXD       ( default input )
+                                            // P7_6 = TXD       ( default output)
                                             // P7_7 = CLK       ( default input )
 
     pd8 = p8 = 0xc0;                        // P8_0 = RXD       ( default input )
@@ -68,14 +67,14 @@ void drvGPIO_Init(void)
                                             // P8_6 = LED0      ( default output)
                                             // P8_7 = LED1      ( default output)
 
-	prc2 = 1;								// unprotect pd9
-	pd9	 = 0x00;					        // P9_0 - P9_2 as input for USB 
-	prc2 = 0;								// protect pd9
-											// P9_3 = DAC	    ( default input )
-											// P9_4 = OCO	    ( default input	)
-											// P9_5 = VIN	    ( default input	)
-											// P9_6 = CIN	    ( default input	)
-											// P9_7 = RST	    ( default input )
+    prc2     = 1;                           // unprotect pd9
+    p9 = pd9 = 0x80;                        // P9_0 - P9_2 as input for USB
+    prc2     = 0;                           // protect pd9
+                                            // P9_3 = DAC       ( default input )
+                                            // P9_4 = OCO       ( default input )
+                                            // P9_5 = VIN       ( default input )
+                                            // P9_6 = CIN       ( default input )
+                                            // P9_7 = RST       ( default output)
 
     da0e = 1;                               // enable DAC
 }
